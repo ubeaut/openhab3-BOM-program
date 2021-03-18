@@ -1,0 +1,24 @@
+var OPENHAB_CONF = Java.type('java.lang.System').getenv('OPENHAB_CONF');
+
+//need below to log to openhab.log file
+var logger = Java.type('org.slf4j.LoggerFactory').getLogger('org.openhab.rule.' + ctx.ruleUID);
+//below is if you are going to use the ececute command
+var Exec = Java.type("org.openhab.core.model.script.actions.Exec");
+//below is also neede for the execute command
+var Duration = Java.type("java.time.Duration");
+
+var HttpUtil = Java.type("org.openhab.core.io.net.http.HttpUtil");
+
+//because icon names with dashes in them are reserved I replace the dash with underscore
+//if they are present in the JSON data.
+
+function input(i) {
+    return i.replace(/-/g,'_');
+}
+
+//replace the r7hgdpk with your location code which you have found from https://weather.bom.gov.au
+
+var DATA = HttpUtil.executeUrl("GET","https://api.weather.bom.gov.au/v1/locations/r7hgdpk/forecasts/daily", 2000).replace(/icon_descriptor...\w+/g,input);
+
+events.postUpdate("BOMdata", DATA);
+
