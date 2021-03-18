@@ -1,0 +1,49 @@
+component: oh-list-card
+config:
+  simpleList: false
+  mediaList: true
+  title: Forecast
+slots:
+  default:
+    - component: oh-list-item
+      config:
+        icon: ="oh:"+(JSON.parse(items.BOMdata.state).data[0].icon_descriptor)
+        title: =dayjs(JSON.parse(items.BOMdata.state).data[0].date).format('dddd MMM D')
+        action: popover
+        actionModal: page:day0
+    - component: oh-list-item
+      config:
+        icon: ="oh:"+(JSON.parse(items.BOMdata.state).data[1].icon_descriptor)
+        title: =dayjs(JSON.parse(items.BOMdata.state).data[1].date).format('dddd MMM D')
+        action: popover
+        actionModal: page:day1
+    - component: oh-list-item
+      config:
+        icon: ="oh:"+(JSON.parse(items.BOMdata.state).data[2].icon_descriptor)
+        title: =dayjs(JSON.parse(items.BOMdata.state).data[2].date).format('dddd MMM D')
+        action: popover
+        actionModal: page:day2
+    - component: oh-list-item
+      config:
+        icon: ="oh:"+(JSON.parse(items.BOMdata.state).data[3].icon_descriptor)
+        title: =dayjs(JSON.parse(items.BOMdata.state).data[3].date).format('dddd MMM D')
+        action: popover
+        actionModal: page:day3
+    - component: oh-list-item
+      config:
+        icon: ="oh:"+(JSON.parse(items.BOMdata.state).data[4].icon_descriptor)
+        title: =dayjs(JSON.parse(items.BOMdata.state).data[4].date).format('dddd MMM D')
+        action: popover
+        actionModal: page:day4
+    - component: oh-list-item
+      config:
+        icon: ="oh:"+(JSON.parse(items.BOMdata.state).data[5].icon_descriptor)
+        title: =dayjs(JSON.parse(items.BOMdata.state).data[5].date).format('dddd MMM D')
+        action: popover
+        actionModal: page:day5
+    - component: oh-list-item
+      config:
+        icon: ="oh:"+(JSON.parse(items.BOMdata.state).data[6].icon_descriptor)
+        title: =dayjs(JSON.parse(items.BOMdata.state).data[6].date).format('dddd MMM D')
+        action: popover
+        actionModal: page:day6
