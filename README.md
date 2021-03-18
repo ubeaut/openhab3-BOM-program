@@ -13,8 +13,17 @@ Basically this is what needs to be done.
 
 Create a string item call it BOMdata that way you can use the examples I will put up here.
 
+Run a bash script (supplied) to grab the icons from the BOM and remove the dashes in the icon names and replace
+them with underscores because in Openhab an icon with a dash in it is a special icon. 
+For example if the icon was called light-showers the icon that you would get is a light bulb.
+If the icon has been renamed to light_showers then you get the correct icon.
+
 Create a rule to go to the BOM website and get the json forecast data for your location.
 
 Create pages or whatever you like and display the data.
+
+This is my first attempt at github, so bear with me.
+
+The instructions will be in the wiki.
 
 
