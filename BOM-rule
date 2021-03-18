@@ -7,18 +7,22 @@ var Exec = Java.type("org.openhab.core.model.script.actions.Exec");
 //below is also neede for the execute command
 var Duration = Java.type("java.time.Duration");
 
-var HttpUtil = Java.type("org.openhab.core.io.net.http.HttpUtil");
+//var HttpUtil = Java.type("org.openhab.core.io.net.http.HttpUtil");
+var HttpGet = Java.type("org.openhab.core.model.script.actions.HTTP");
+
 
 //because icon names with dashes in them are reserved I replace the dash with underscore
-//if they are present in the JSON data.
-
 function input(i) {
     return i.replace(/-/g,'_');
 }
 
-//replace the r7hgdpk with your location code which you have found from https://weather.bom.gov.au
-
-var DATA = HttpUtil.executeUrl("GET","https://api.weather.bom.gov.au/v1/locations/r7hgdpk/forecasts/daily", 2000).replace(/icon_descriptor...\w+/g,input);
+//var DATA = HttpUtil.executeUrl("GET","https://api.weather.bom.gov.au/v1/locations/r7hgdpk/forecasts/daily", 2000).replace(/icon_descriptor...\w+/g,input);
+var DATA = HttpGet.sendHttpGetRequest("https://api.weather.bom.gov.au/v1/locations/r7hgdpk/forecasts/daily", 2000).replace(/icon_descriptor...\w+/g,input);
 
 events.postUpdate("BOMdata", DATA);
+
+
+
+                   
+
 
