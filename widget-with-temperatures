@@ -1,0 +1,27 @@
+uid: BOM-widget-with-temps
+tags: []
+timestamp: Mar 18, 2021, 7:27:29 PM
+component: oh-list
+config:
+  style:
+    min-width: 250px
+    --f7-list-item-after-font-size: 12px
+    --f7-list-item-after-font-weight: bold
+    --f7-list-item-after-text-color: var(--f7-text-color)
+slots:
+  default:
+    - component: oh-repeater
+      config:
+        sourceType: range
+        rangeStart: 0
+        rangeStop: 6
+        for: index
+        fragment: true
+      slots:
+        default:
+          - component: oh-list-item
+            config:
+              title: =dayjs(JSON.parse(items.BOMdata.state).data[loop.index_idx].date).format('dddd MMM D')
+              footer: =JSON.parse(items.BOMdata.state).data[loop.index_idx].extended_text
+              after: =(JSON.parse(items.BOMdata.state).data[loop.index_idx].temp_min  == null) ? " Min --- " + " Max " + JSON.parse(items.BOMdata.state).data[loop.index_idx].temp_max :"Min " + JSON.parse(items.BOMdata.state).data[loop.index_idx].temp_min + " Max " + JSON.parse(items.BOMdata.state).data[loop.index_idx].temp_max
+              icon: ="oh:"+JSON.parse(items.BOMdata.state).data[loop.index_idx].icon_descriptor
