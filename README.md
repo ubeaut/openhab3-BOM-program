@@ -9,3 +9,12 @@ What this doesn't do is have the latest temperature etc.
 It will just display the forecast for the next 7 days.
 Nothing flash....if you want all the other bells and whistles then go and grab the other BOM add-on.
 
+Basically this is what needs to be done.
+
+Create a string item call it BOMdata that way you can use the examples I will put up here.
+
+Create a rule to go to the BOM website and get the json forecast data for your location.
+
+Create pages or whatever you like and display the data.
+
+
