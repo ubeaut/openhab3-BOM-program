@@ -1,0 +1,87 @@
+component: oh-masonry
+slots:
+  default:
+    - component: oh-label-card
+      config:
+        title: =dayjs(JSON.parse(items.BOMdata.state).data[0].date).format('dddd MMM D')
+        icon: ="oh:"+(JSON.parse(items.BOMdata.state).data[0].icon_descriptor)
+        footer: ="Min -- Max " + JSON.parse(items.BOMdata.state).data[0].temp_max  + "
+          Chance of rain " + JSON.parse(items.BOMdata.state).data[0].rain.chance
+          + "%"
+        fontSize: 12px
+        fontWeight: bold
+        label: =JSON.parse(items.BOMdata.state).data[0].short_text
+        action: popover
+        actionModal: page:day0
+    - component: oh-label-card
+      config:
+        title: =dayjs(JSON.parse(items.BOMdata.state).data[1].date).format('dddd MMM D')
+        icon: ="oh:"+(JSON.parse(items.BOMdata.state).data[1].icon_descriptor)
+        footer: ="Min " + JSON.parse(items.BOMdata.state).data[1].temp_min + " Max " +
+          JSON.parse(items.BOMdata.state).data[1].temp_max+ " Chance of rain " +
+          JSON.parse(items.BOMdata.state).data[1].rain.chance + "%"
+        fontSize: 12px
+        fontWeight: bold
+        label: =JSON.parse(items.BOMdata.state).data[1].short_text
+        action: popover
+        actionModal: page:day1
+    - component: oh-label-card
+      config:
+        title: =dayjs(JSON.parse(items.BOMdata.state).data[2].date).format('dddd MMM D')
+        icon: ="oh:"+(JSON.parse(items.BOMdata.state).data[2].icon_descriptor)
+        footer: ="Min " + JSON.parse(items.BOMdata.state).data[2].temp_min + " Max " +
+          JSON.parse(items.BOMdata.state).data[2].temp_max + " Chance of rain "
+          + JSON.parse(items.BOMdata.state).data[2].rain.chance + "%"
+        fontSize: 12px
+        fontWeight: bold
+        label: =JSON.parse(items.BOMdata.state).data[2].short_text
+        action: popover
+        actionModal: page:day2
+    - component: oh-label-card
+      config:
+        title: =dayjs(JSON.parse(items.BOMdata.state).data[3].date).format('dddd MMM D')
+        icon: ="oh:"+(JSON.parse(items.BOMdata.state).data[3].icon_descriptor)
+        footer: ="Min " + JSON.parse(items.BOMdata.state).data[3].temp_min + " Max " +
+          JSON.parse(items.BOMdata.state).data[3].temp_max + " Chance of rain "
+          + JSON.parse(items.BOMdata.state).data[3].rain.chance + "%"
+        fontSize: 12px
+        fontWeight: bold
+        label: =JSON.parse(items.BOMdata.state).data[3].short_text
+        action: popover
+        actionModal: page:day3
+    - component: oh-label-card
+      config:
+        title: =dayjs(JSON.parse(items.BOMdata.state).data[4].date).format('dddd MMM D')
+        icon: ="oh:"+(JSON.parse(items.BOMdata.state).data[4].icon_descriptor)
+        footer: ="Min " + JSON.parse(items.BOMdata.state).data[4].temp_min + " Max " +
+          JSON.parse(items.BOMdata.state).data[4].temp_max + " Chance of rain "
+          + JSON.parse(items.BOMdata.state).data[4].rain.chance + "%"
+        fontSize: 12px
+        fontWeight: bold
+        label: =JSON.parse(items.BOMdata.state).data[4].short_text
+        action: popover
+        actionModal: page:day4
+    - component: oh-label-card
+      config:
+        title: =dayjs(JSON.parse(items.BOMdata.state).data[5].date).format('dddd MMM D')
+        icon: ="oh:"+(JSON.parse(items.BOMdata.state).data[5].icon_descriptor)
+        footer: ="Min " + JSON.parse(items.BOMdata.state).data[5].temp_min + " Max " +
+          JSON.parse(items.BOMdata.state).data[5].temp_max + " Chance of rain "
+          + JSON.parse(items.BOMdata.state).data[5].rain.chance + "%"
+        fontSize: 12px
+        fontWeight: bold
+        label: =JSON.parse(items.BOMdata.state).data[5].short_text
+        action: popover
+        actionModal: page:day5
+    - component: oh-label-card
+      config:
+        title: =dayjs(JSON.parse(items.BOMdata.state).data[6].date).format('dddd MMM D')
+        icon: ="oh:"+(JSON.parse(items.BOMdata.state).data[6].icon_descriptor)
+        footer: ="Min " + JSON.parse(items.BOMdata.state).data[6].temp_min + " Max " +
+          JSON.parse(items.BOMdata.state).data[6].temp_max + " Chance of rain "
+          + JSON.parse(items.BOMdata.state).data[6].rain.chance + "%"
+        fontSize: 12px
+        fontWeight: bold
+        label: =JSON.parse(items.BOMdata.state).data[6].short_text
+        action: popover
+        actionModal: page:day6
