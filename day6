@@ -1,0 +1,10 @@
+component: oh-label-card
+config:
+  title: =dayjs(JSON.parse(items.BOMdata.state).data[6].date).format('dddd MMM D')
+  footer: ="Min " + JSON.parse(items.BOMdata.state).data[6].temp_min + " Max " +
+    JSON.parse(items.BOMdata.state).data[6].temp_max
+  fontSize: 12px
+  fontWeight: bold
+  vertical: true
+  label: =JSON.parse(items.BOMdata.state).data[6].extended_text
+  icon: ="oh:"+JSON.parse(items.BOMdata.state).data[6].icon_descriptor
