@@ -1,3 +1,5 @@
+//This has to be a ECMA 262 Edition 5.1 rule or it won't work.
+
 var OPENHAB_CONF = Java.type('java.lang.System').getenv('OPENHAB_CONF');
 
 //need below to log to openhab.log file
