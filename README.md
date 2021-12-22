@@ -18,7 +18,7 @@ them with underscores because in Openhab an icon with a dash in it is a special 
 For example if the icon was called light-showers the icon that you would get is a light bulb.
 If the icon has been renamed to light_showers then you get the correct icon.
 
-Create a rule to go to the BOM website and get the json forecast data for your location.
+Create a rule to go to the BOM website and get the json forecast data for your location. This rule has to be an ECMA 262 5.1 edition rule and ot the new one that OH3 has now.
 
 Create pages or whatever you like and display the data.
 
