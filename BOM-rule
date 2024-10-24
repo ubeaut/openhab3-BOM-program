@@ -18,8 +18,8 @@ function input(i) {
     return i.replace(/-/g,'_');
 }
 
-//var DATA = HttpUtil.executeUrl("GET","https://api.weather.bom.gov.au/v1/locations/r7hgdpk/forecasts/daily", 2000).replace(/icon_descriptor...\w+/g,input);
-var DATA = HttpGet.sendHttpGetRequest("https://api.weather.bom.gov.au/v1/locations/r7hgdpk/forecasts/daily", 2000).replace(/icon_descriptor...\w+/g,input);
+//var DATA = HttpUtil.executeUrl("GET","https://api.weather.bom.gov.au/v1/locations/r7hgdpn/forecasts/daily", 2000).replace(/icon_descriptor...\w+/g,input);
+var DATA = HttpGet.sendHttpGetRequest("https://api.weather.bom.gov.au/v1/locations/r7hgdpn/forecasts/daily", 2000).replace(/icon_descriptor...\w+/g,input);
 
 events.postUpdate("BOMdata", DATA);
 
